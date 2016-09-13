@@ -1,0 +1,19 @@
+#!/user/bin/env php
+
+<?php
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Injection\Person\Person;
+use Injection\InjectionExtension;
+
+$container = new ContainerBuilder();
+
+$extension = new InjectionExtension();
+
+$extension->load(['person' => new Person()], $container);
+
+$provider = $container->get('person_provider');
+
+$provider->name();
