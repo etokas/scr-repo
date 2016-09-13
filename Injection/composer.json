@@ -1,0 +1,16 @@
+{
+    "name": "sylva/injection",
+    "authors": [
+        {
+            "name": "etosylva",
+            "email": "169995@supinfo.com"
+        }
+    ],
+    "require": {
+        "symfony/dependency-injection": "^3.1",
+        "symfony/config": "^3.1"
+    },
+    "autoload": {
+      "psr-4": { "Injection\\": "src/" }
+    }
+}
